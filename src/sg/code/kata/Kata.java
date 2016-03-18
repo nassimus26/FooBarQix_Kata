@@ -11,7 +11,7 @@ import java.util.stream.IntStream;
  * Main Class
  */
 public class Kata {
-    private static IntConverter converter; //TODO init with the right implementation
+    private static IntConverter converter = new KataConverter();
     public static void printIntegerAsKata(int from, int to) throws Exception {
         if ( from >  to )
             throw new Exception("The second number must be greater than the first one");
