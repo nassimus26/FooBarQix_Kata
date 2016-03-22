@@ -71,7 +71,7 @@ public class TestKata {
                             number_of_divisors_in_a.incrementAndGet();
                     });
                     AtomicInteger lastIndex_in_i = new AtomicInteger(-1);
-                    List<String> keys =  Arrays.asList(a.split("(?<=\\G.{4})"));
+                    List<String> keys =  Arrays.asList(a.split("(?<=\\G.{3})"));
                     keys.forEach((k)->{
                         int newIndex = a.indexOf(k, number_of_divisors_in_a.get()*3);
                         StringBuilder key = new StringBuilder();
