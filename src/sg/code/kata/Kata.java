@@ -12,12 +12,14 @@ import java.util.stream.IntStream;
  */
 public class Kata {
     private static IntConverter converter = new KataConverter();
-    public static void printIntegerAsKata(int from, int to) throws Exception {
+    public static String printIntegerAsKata(int from, int to) throws Exception {
         if ( from >  to )
             throw new Exception("The second number must be greater than the first one");
         StringBuilder sb = new StringBuilder();
         IntStream.range( from, to+1 ).forEach( (i)-> sb.append( converter.convert(i) ).append(" ") );
-        System.out.println( sb.toString().trim() );
+        String result = sb.toString().trim();
+        System.out.println( result );
+        return result;
     }
     public static void main(String[] args){
         try {

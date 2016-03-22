@@ -10,9 +10,9 @@ import java.util.stream.Collectors;
  * Default implementation for IntConverter (Kata)
  */
 public class KataConverter implements IntConverter{
-    private enum KataValues {Foo, Bar, Qix}
-    private static Map<Integer, KataValues> intToStrMap = new LinkedHashMap<Integer, KataValues>();
-    private static Map<Character, KataValues> charToStrMap = new LinkedHashMap<Character, KataValues>();
+    public enum KataValues {Foo, Bar, Qix}
+    public static Map<Integer, KataValues> intToStrMap = new LinkedHashMap<Integer, KataValues>();
+    public static Map<Character, KataValues> charToStrMap = new LinkedHashMap<Character, KataValues>();
     static{
         intToStrMap.put( 3, KataValues.Foo );
         intToStrMap.put( 5, KataValues.Bar );
