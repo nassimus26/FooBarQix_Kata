@@ -2,6 +2,7 @@ package sg.code;
 
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import sg.code.converter.KataConverter;
 import sg.code.kata.Kata;
@@ -18,8 +19,8 @@ public class TestKata {
     private static String kata;
     private static List<String> kataValues;
 
-    @Before
-    public void test() throws Exception {
+    @BeforeClass
+    public static void test() throws Exception {
         kata = Kata.printIntegerAsKata(1, 100);
         kataValues = Arrays.asList(kata.split(" "));
     }
